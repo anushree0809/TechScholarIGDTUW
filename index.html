@@ -6,23 +6,80 @@
     <title>TechScholarIGDTUW-Your All-in-one Scholarship Portal</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="./assets/Cute brown owl with book vector image on VectorStock.jpeg" type="image/jpeg">
 </head>
 <body>
     <header>
-        <div class="logobox">
-            <img src="./assests/Cute brown owl with book vector image on VectorStock.jpeg" alt="">
+        <a class="logobox" href="#HERO">
+            <img src="./assets/Cute brown owl with book vector image on VectorStock.jpeg" alt="logo">
             <p>TechScholar<span>IGDTUW</span></p>
-        </div>
+        </a>
     
         <div class="navbar">
             <a href="#about">About Us</a>
-            <a href="">Login</a>
-            <a href="">Register</a>
+            <a href="#" id="loginBtn">Login</a>
+            <a href="#" id="registerBtn">Register</a>
         </div>
     </header>
 
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+          
+          <h3>Login</h3>
+          <p>Don't have an account yet? <a href="#">Register here</a></p>
+  
+          <form>
+              <!-- Email Address -->
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
+  
+              <!-- Password -->
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+  
+              <!-- Forgot Password -->
+              <a href="#">Forgot password?</a><br><br>
+  
+              <button type="submit">Login</button>
+          </form>
+  
+          <p>Or continue with:</p>
+          <!-- Google Login Option -->
+          <button class="google-btn">Login with Google</button>
+      </div>
+  </div>
+
+<!-- Register Modal -->
+<div id="registerModal" class="register-modal">
+  <div class="register-modal-content">
+      
+      <h2>Register</h2>
+      <p>Already have an account? <a href="#" id="switchToLogin">Log in here</a></p>
+
+      <form>
+          <!-- Email Address -->
+          <label for="register-email">Email address</label>
+          <input type="email" id="register-email" name="register-email" placeholder="Enter Email Address" required><br><br>
+
+          <!-- Instructions -->
+          <p>
+              Enter your email address to receive a one-time password (OTP) for verification.
+              <br>We will send you an OTP to the provided email address. Please check your inbox (or spam folder) and enter the OTP to verify your email.
+          </p>
+
+          <!-- Send OTP Button -->
+          <button type="submit" id="sendOtpBtn">Send OTP</button>
+      </form>
+
+      <p>Or continue with:</p>
+      <!-- Google Login Option -->
+      <button class="register-google-btn">Register with Google</button>
+  </div>
+</div>
+
+
     <main>
-        <section class="hero">
+        <section class="hero" id="HERO">
         <h5>Choose Category</h5>
           <div class="card">
             <h3>Card 1</h3>
@@ -52,17 +109,17 @@
             <p>We've made it easier than ever to access life-changing opportunities. Just follow these 3 simple steps.</p>
             <div class="steps">
               <div class="step">
-                <img src="./assests/img1.png" alt="Register">
+                <img src="./assets/img1.png" alt="Register">
                 <h3>Register</h3>
                 <p>Sign up now for free to never miss an opportunity. Tons of opportunities are waiting for you.</p>
               </div>
               <div class="step">
-                <img src="/assests/img2.png" alt="Update Profile">
+                <img src="./assets/img2.png" alt="Update Profile">
                 <h3>Update profile</h3>
                 <p>Once registered, ensure your profile is complete and select your preferred notification categories.</p>
               </div>
               <div class="step">
-                <img src="/assests/img3.png" alt="Sit Back">
+                <img src="./assets/img3.png" alt="Sit Back">
                 <h3>Sit back</h3>
                 <p>Relax and let the opportunities come to you. We'll notify you of every relevant opportunity.</p>
               </div>
