@@ -18,86 +18,83 @@
         <div class="navbar">
             <a href="#about">About Us</a>
             <a href="#" id="loginBtn">Login</a>
-            <a href="#" id="registerBtn">Register</a>
+            <a href="#" id="openRegisterPopup">Register</a>
         </div>
     </header>
 
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Let's Sign In</h2>
+      <p>Pick your preferred method.</p>
+
+      <div class="button-container">
+          <button class="google-button">Continue with Google</button>
           
-          <h3>Login</h3>
-          <p>Don't have an account yet? <a href="#">Register here</a></p>
-  
-          <form>
-              <!-- Email Address -->
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
-  
-              <!-- Password -->
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
-  
-              <!-- Forgot Password -->
-              <a href="#">Forgot password?</a><br><br>
-  
-              <button type="submit">Login</button>
-          </form>
-  
-          <p>Or continue with:</p>
-          <!-- Google Login Option -->
-          <button class="google-btn">Login with Google</button>
       </div>
-  </div>
 
-<!-- Register Modal -->
-<div id="registerModal" class="register-modal">
-  <div class="register-modal-content">
-      
-      <h2>Register</h2>
-      <p>Already have an account? <a href="#" id="switchToLogin">Log in here</a></p>
+      <div class="divider">OR Register/Login with email</div>
 
-      <form>
-          <!-- Email Address -->
-          <label for="register-email">Email address</label>
-          <input type="email" id="register-email" name="register-email" placeholder="Enter Email Address" required><br><br>
+      <div class="email-section">
+          <label for="email">Email: </label>
+          <input type="email" id="email" placeholder="Enter your email">
+      </div>
 
-          <!-- Instructions -->
-          <p>
-              Enter your email address to receive a one-time password (OTP) for verification.
-              <br>We will send you an OTP to the provided email address. Please check your inbox (or spam folder) and enter the OTP to verify your email.
-          </p>
+      <button class="login-button">Sign In</button>
 
-          <!-- Send OTP Button -->
-          <button type="submit" id="sendOtpBtn">Send OTP</button>
-      </form>
-
-      <p>Or continue with:</p>
-      <!-- Google Login Option -->
-      <button class="register-google-btn">Register with Google</button>
+      <div class="signup">
+          Don’t have an account? <a href="#">Sign up</a>
+      </div>
   </div>
 </div>
 
+<div id="registerPopup">
+  <div class="popup-container">
+    <!-- <button class="popup-close" onclick="toggleRegisterPopup()">✖</button> -->
+    <h2>Let's Sign Up</h2>
+    <p>Pick your preferred method.</p>
+
+    <div class="Rbutton-container">
+      <button class="Rgoogle-button">Continue with Google</button>
+  </div>
+
+    <div class="Rdivider">OR Register/Login with email</div>
+    
+    <div class="form-group">
+      <label for="reg-username">User Name:</label>
+      <input type="text" id="reg-username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="reg-email">Email:</label>
+      <input type="email" id="reg-email" placeholder="Enter your email">
+    </div>
+    <button class="register-button">Sign Up</button>
+    <div class="signin">
+      Already have an account? <a href="#">Sign In</a>
+  </div>
+  </div>
+</div>
 
     <main>
         <section class="hero" id="HERO">
         <h5>Choose Category</h5>
           <div class="card">
-            <h3>Card 1</h3>
+            <h3>Need Scholarships for Your First Year?</h3>
             <p></p>
             <a href="#" class="view-all">View All</a>
           </div>
           <div class="card">
-            <h3>Card 2</h3>
+            <h3>Ready to Level Up in Your 2nd Year?</h3>
             <p></p>
             <a href="#" class="view-all">View All</a>
           </div>
           <div class="card">
-            <h3>Card 3</h3>
+            <h3>Halfway Through? Need Scholarships for 3rd Year?</h3>
             <p></p>
             <a href="#" class="view-all">View All</a>
           </div>
           <div class="card">
-            <h3>Card 4</h3>
+            <h3>Graduating Soon? Need Final Year Scholarships?</h3>
             <p></p>
             <a href="#" class="view-all">View All</a>
           </div>
