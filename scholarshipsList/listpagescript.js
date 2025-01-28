@@ -48,13 +48,9 @@ function renderScholarships() {
         // Learn More button (Dynamic Link)
         const learnMoreButton = document.createElement('a');
         learnMoreButton.classList.add('learn-more-btn');
-<<<<<<< HEAD
+
         learnMoreButton.href = `../individual/HTML.html?id=${scholarship.id}`;
 
-=======
-        learnMoreButton.href = `TechScholarIGDTUW/individual/HTML.html?id=${scholarship.id}`;
-// Updated
->>>>>>> c572e1d6fc12ed398c7f5e100cdfe49fc13deba9
         learnMoreButton.textContent = 'Learn More';
 
         content.appendChild(title);
