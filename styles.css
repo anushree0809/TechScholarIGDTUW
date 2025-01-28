@@ -496,6 +496,7 @@ footer .footer-bottom p {
   background-color: solid black;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .popup-container , .modal-content {
