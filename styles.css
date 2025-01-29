@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition-d;
+  transition: background-color 0.3s ease-in-out; 
 }
 
 body {
@@ -496,6 +496,7 @@ footer .footer-bottom p {
   background-color: solid black;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .popup-container , .modal-content {

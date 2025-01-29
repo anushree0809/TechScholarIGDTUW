@@ -1,22 +1,22 @@
-// List of scholarships
+
 const scholarships = [
     {
+        id: "pm-scholarship",
         title: "PM Scholarship",
         description: "This scholarship is aimed at students with exceptional leadership potential, helping them pursue higher education with ease.",
-        image: '../assets/sch1.jpg',
-        link: "/scholarship/pm-scholarship"
+        image: '../assets/sch1.jpg'
     },
     {
+        id: "academic-skills",
         title: "Great Academic Skills Scholarship",
         description: "Awarded to students who excel academically, this scholarship helps you continue your studies at top universities.",
-        image: "../assets/sch2.webp",
-        link: "/scholarship/academic-skills"
+        image: "../assets/sch2.webp"
     },
     {
+        id: "smile-2025",
         title: "Smile Scholarships 2025",
         description: "The Smile Scholarships 2025 is for students who show resilience and positive attitude, aiming to make a difference in society.",
-        image: "../assets/sch4.jpg",
-        link: "/scholarship/smile-2025"
+        image: "../assets/sch4.jpg"
     }
 ];
 
@@ -27,7 +27,7 @@ function renderScholarships() {
     scholarships.forEach(scholarship => {
         const scholarshipCard = document.createElement('div');
         scholarshipCard.classList.add('scholarship-card');
-        
+
         // Card image
         const image = document.createElement('img');
         image.src = scholarship.image;
@@ -45,10 +45,12 @@ function renderScholarships() {
         description.classList.add('scholarship-description');
         description.textContent = scholarship.description;
 
-        // Learn More button
+        // Learn More button (Dynamic Link)
         const learnMoreButton = document.createElement('a');
         learnMoreButton.classList.add('learn-more-btn');
-        learnMoreButton.href = scholarship.link;
+
+        learnMoreButton.href = `../individual/HTML.html?id=${scholarship.id}`;
+
         learnMoreButton.textContent = 'Learn More';
 
         content.appendChild(title);
@@ -64,5 +66,6 @@ function renderScholarships() {
     });
 }
 
-// Call the renderScholarships function to populate the page
+// Call the function to populate the page
 renderScholarships();
+
