@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarships for First Year</title>
-    <!-- Ensure the correct path to the stylesheet -->
     <link rel="stylesheet" href="./listpagestyle.css">
 </head>
 <body>
@@ -22,18 +21,32 @@
         </div>
     </header>
 
-    <!-- Main Navigation -->
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/scholarships">Scholarships</a></li>
-            <!-- Add more links as needed -->
-        </ul>
-    </nav>
-
     <!-- Scholarships Page Content -->
     <div class="container">
         <h1>Scholarships for First Year</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search scholarships...">
+            
+            <!-- Location Filter -->
+            <select id="locationFilter">
+                <option value="all">All Locations</option>
+                <option value="Inside Delhi">Inside Delhi</option>
+                <option value="Outside Delhi">Outside Delhi</option>
+            </select>
+
+            <!-- Category Filter -->
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="EWS">EWS</option>
+                <option value="SC/ST">SC/ST</option>
+                <option value="OBC">OBC</option>
+                <option value="General">General</option>
+            </select>
+        </div>
+
+        <!-- Scholarships List -->
         <div class="scholarship-list" id="scholarships">
             <!-- List of scholarships will be dynamically inserted here -->
         </div>
