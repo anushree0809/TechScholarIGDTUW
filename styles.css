@@ -3,10 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   transition: background-color 0.3s ease-in-out; 
+  font-family: Arial, sans-serif;
 }
 
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 html{
   scroll-behavior: smooth;
@@ -148,7 +152,7 @@ header {
 
 .how-it-works {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 10px;
 }
 
 .how-it-works h2 {
@@ -167,13 +171,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 120px;
+  gap: 100px;
 }
 
 .step {
   text-align: center;
   width: 250px;
-  padding: 40px;
+  padding: 35px;
 }
 
 .step img {
@@ -509,4 +513,123 @@ footer .footer-bottom p {
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+/* CSS FOR ABOUT us */
+.about-section {
+  background: linear-gradient(to right, #f7f0ff, #e5d4ff);
+  padding: 50px 20px;
+  text-align: center;
+}
 
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #7a1ea1;
+  margin-bottom: 23px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 1.7rem;
+  }
+
+  p, ul li {
+      font-size: 1rem;
+  }
+}
+
+.team-section {
+  background: #f0eaff;
+  padding: 50px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.team-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.team-card h3 {
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+.team-card p {
+  font-size: 14px;
+  color: #666;
+}
+@media (max-width: 768px) {
+  .team-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+/* css for theme change */
+:root {
+  --bg-color: white;
+  --text-color: black;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: white;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

@@ -1,17 +1,27 @@
 document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
+  button.addEventListener('click', () => {
       const faqItem = button.parentElement;
-  
+      const icon = button.querySelector('.faq-icon');
+
       faqItem.classList.toggle('active');
-  
-      // Close other open FAQ items
+
+      // Toggle between "+" and "-" symbol
+      if (faqItem.classList.contains('active')) {
+          icon.textContent = '−'; // Minus symbol
+      } else {
+          icon.textContent = '+'; // Plus symbol
+      }
+
+      // Close other open FAQ items and reset their icon
       document.querySelectorAll('.faq-item').forEach(item => {
-        if (item !== faqItem && item.classList.contains('active')) {
-          item.classList.remove('active');
-        }
+          if (item !== faqItem && item.classList.contains('active')) {
+              item.classList.remove('active');
+              item.querySelector('.faq-icon').textContent = '+';
+          }
       });
-    });
   });
+});
+
 
 const loginBtn = document.getElementById('loginBtn');
 const loginModal = document.getElementById('loginModal');
@@ -71,6 +81,30 @@ signinLink.addEventListener('click', function (e) {
 document.getElementById('closeModal').addEventListener('click', function () {
   loginModal.style.display = 'none';
 });
+
+//code for theme change
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+
+// Check for saved theme preference
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeIcon.textContent = "☀️"; // Sun icon for light mode
+}
+
+// Toggle theme on button click
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.textContent = "☀️"; // Sun icon for light mode
+    } else {
+        localStorage.setItem("theme", "light");
+        themeIcon.textContent = "🌙"; // Moon icon for dark mode
+    }
+});
+
 
 
 
