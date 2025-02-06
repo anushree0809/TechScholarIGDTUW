@@ -25,26 +25,40 @@
     <div class="container">
         <h1>Scholarships for First Year</h1>
 
-        <!-- Search and Filter Section -->
-        <div class="search-filter">
-            <input type="text" id="searchInput" placeholder="Search scholarships...">
-            
-            <!-- Location Filter -->
-            <select id="locationFilter">
-                <option value="all">All Locations</option>
-                <option value="Inside Delhi">Inside Delhi</option>
-                <option value="Outside Delhi">Outside Delhi</option>
-            </select>
+    <!-- Search and Filter Controls -->
+<div class="filter-controls">
+    <input type="text" id="searchInput" placeholder="Search scholarships...">
+    <button id="filterButton">Filters</button>
+</div>
 
-            <!-- Category Filter -->
-            <select id="categoryFilter">
-                <option value="all">All Categories</option>
-                <option value="EWS">EWS</option>
-                <option value="SC/ST">SC/ST</option>
-                <option value="OBC">OBC</option>
-                <option value="General">General</option>
-            </select>
-        </div>
+<!-- Sidebar Filter Section -->
+<div class="sidebar-filter" id="filterContainer">
+    <button id="closeFilter">&times;</button>
+    <h2>Filters</h2>
+
+    <!-- Location Filter -->
+    <label for="locationFilter">Location:</label>
+    <select id="locationFilter">
+        <option value="all">All Locations</option>
+        <option value="Inside Delhi">Inside Delhi</option>
+        <option value="Outside Delhi">Outside Delhi</option>
+    </select>
+
+    <!-- Category Filter -->
+    <label for="categoryFilter">Category:</label>
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="EWS">EWS</option>
+        <option value="SC/ST">SC/ST</option>
+        <option value="OBC">OBC</option>
+        <option value="General">General</option>
+    </select>
+    
+    <button id="Done">Done</button>
+</div>
+
+<!-- Overlay to Blur Page -->
+<div class="overlay" id="overlay"></div>
 
         <!-- Scholarships List -->
         <div class="scholarship-list" id="scholarships">

@@ -17,9 +17,7 @@ header {
     border-bottom: 1px solid #ddd;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
+  } 
   .logobox {
     display: flex;
     align-items: center;
@@ -170,37 +168,133 @@ h1 {
     background-color: #b84d4d; /* Lighter maroon on hover */
 }
 
-.search-filter {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.search-filter input, .search-filter select {
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.scholarship-item {
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  background: #f9f9f9;
-}
-
-.search-filter {
+/* Filter Button */
+/* Centering the Filter Button and Search Bar */
+.filter-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 15px; /* Space between button and search bar */
+  margin: 20px 0 30px; /* Add bottom margin to create gap below */
 }
 
-.search-filter input, .search-filter select {
-  padding: 10px;
+/* Filter Button */
+#filterButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#filterButton:hover {
+  background-color: #0056b3;
+}
+
+/* Search Input */
+#searchInput {
+  padding: 8px;
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  width: 250px;
+}
+
+/* Add extra space below the filter section */
+.scholarship-list {
+  margin-top: 20px; /* Space between filters and scholarship list */
+}
+
+
+/* Sidebar Container */
+.sidebar-filter {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1002;
+}
+
+/* Show Sidebar */
+.sidebar-filter.show-sidebar {
+  left: 0;
+}
+
+/* Close Button */
+#closeFilter {
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Filter Inputs */
+.sidebar-filter input,
+.sidebar-filter select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+/* Sidebar Overlay Effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+
+/* Show Overlay When Sidebar Opens */
+.overlay.active {
+  display: block;
+}
+
+/* Center the Search and Filter Button */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between search bar and filter button */
+  margin: 20px 0;
+}
+
+/* Filter Button */
+#filterButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#filterButton:hover {
+  background-color: #0056b3;
+}
+
+/* Search Input */
+#searchInput {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
 }

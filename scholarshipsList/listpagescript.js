@@ -131,5 +131,14 @@ document.getElementById("searchInput").addEventListener("input", filterScholarsh
 document.getElementById("locationFilter").addEventListener("change", filterScholarships);
 document.getElementById("categoryFilter").addEventListener("change", filterScholarships);
 
+document.getElementById("filterButton").addEventListener("click", function () {
+    document.getElementById("filterContainer").classList.add("show-sidebar");
+});
+
+document.getElementById("closeFilter").addEventListener("click", function () {
+    document.getElementById("filterContainer").classList.remove("show-sidebar");
+});
+
+
 // Initial rendering
 renderScholarships();
